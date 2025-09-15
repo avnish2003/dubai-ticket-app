@@ -1,0 +1,395 @@
+.phase-banner {
+  padding: 4rem 0;
+  background: goldenrod;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: center;
+  min-height: 300px;
+  z-index: 2;
+}
+
+.banner-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #4C1D95 0%, #6B46C1 50%, #4C1D95 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Fireworks Animation */
+.fireworks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.firework {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  animation: firework 3s infinite;
+}
+
+.firework-1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.firework-2 {
+  top: 15%;
+  left: 25%;
+  animation-delay: 0.5s;
+}
+
+.firework-3 {
+  top: 25%;
+  left: 40%;
+  animation-delay: 1s;
+}
+
+.firework-4 {
+  top: 20%;
+  left: 60%;
+  animation-delay: 1.5s;
+}
+
+.firework-5 {
+  top: 15%;
+  left: 75%;
+  animation-delay: 2s;
+}
+
+.firework-6 {
+  top: 30%;
+  left: 85%;
+  animation-delay: 2.5s;
+}
+
+.firework-7 {
+  top: 35%;
+  left: 70%;
+  animation-delay: 0.3s;
+}
+
+.firework-8 {
+  top: 40%;
+  left: 50%;
+  animation-delay: 0.8s;
+}
+
+@keyframes firework {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+/* Balloons */
+.balloons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.balloon {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  background: radial-gradient(circle at 30% 30%, #F59E0B, #D97706);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: float 4s ease-in-out infinite;
+  filter: blur(1px);
+}
+
+.balloon-1 {
+  top: 10%;
+  right: 15%;
+  animation-delay: 0s;
+}
+
+.balloon-2 {
+  top: 20%;
+  right: 30%;
+  animation-delay: 1s;
+}
+
+.balloon-3 {
+  top: 15%;
+  right: 50%;
+  animation-delay: 2s;
+}
+
+.balloon-4 {
+  top: 25%;
+  right: 70%;
+  animation-delay: 0.5s;
+}
+
+.balloon-5 {
+  top: 35%;
+  right: 85%;
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+/* Banner Text */
+.banner-text {
+  position: relative;
+  z-index: 3;
+  padding: 2rem;
+}
+
+.discount-text {
+  color: #FFFFFF;
+}
+
+.discount-title {
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.flame-text {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.flame-text::before {
+  content: '🔥';
+  font-size: 0.8em;
+  animation: sparkle 2s infinite;
+}
+
+.flame-text::after {
+  content: '🔥';
+  font-size: 0.8em;
+  animation: sparkle 2s infinite 1s;
+}
+
+.discount-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #F59E0B;
+}
+
+.discount-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #D1D5DB;
+  max-width: 500px;
+}
+
+.banner-cta {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  border: none;
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+}
+
+.banner-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(245, 158, 11, 0.4);
+}
+
+/* Phase Text */
+.phase-text {
+  position: relative;
+  z-index: 3;
+  padding: 2rem;
+}
+
+.phase-number {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.phase-label {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #F59E0B, #FFFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.phase-digit {
+  display: block;
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, #F59E0B, #FFFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.phase-digit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #F59E0B, #FFFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: blur(2px);
+  z-index: -1;
+}
+
+/* Animations */
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .phase-banner {
+    padding: 3rem 0;
+  }
+  
+  .banner-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .banner-text {
+    padding: 1.5rem;
+  }
+  
+  .phase-text {
+    padding: 1.5rem;
+  }
+  
+  .discount-title {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+  }
+  
+  .discount-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .discount-description {
+    font-size: 1rem;
+  }
+  
+  .phase-label {
+    font-size: 1.5rem;
+  }
+  
+  .phase-digit {
+    font-size: 4rem;
+  }
+  
+  .balloon {
+    width: 40px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .phase-banner {
+    padding: 2rem 0;
+  }
+  
+  .banner-content {
+    min-height: 250px;
+  }
+  
+  .banner-text,
+  .phase-text {
+    padding: 1rem;
+  }
+  
+  .discount-title {
+    font-size: clamp(1.25rem, 10vw, 2rem);
+  }
+  
+  .discount-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .discount-description {
+    font-size: 0.95rem;
+  }
+  
+  .banner-cta {
+    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
+  }
+  
+  .phase-label {
+    font-size: 1.25rem;
+  }
+  
+  .phase-digit {
+    font-size: 3rem;
+  }
+  
+  .firework {
+    width: 3px;
+    height: 3px;
+  }
+  
+  .balloon {
+    width: 30px;
+    height: 45px;
+  }
+}
