@@ -32,7 +32,7 @@ app.use(cors({
   origin: [
   "http://localhost:3000", // local development
   "https://zippy-taiyaki-d21c63.netlify.app" // deployed frontend
-];,
+];
   credentials: true
 }));
 
