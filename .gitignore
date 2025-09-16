@@ -1,0 +1,18 @@
+# Git ignore file 
+# Ignore dependencies
+node_modules/
+
+# Ignore build files
+frontend/build/
+backend/build/
+dist/
+
+# Ignore logs
+*.log
+
+# Ignore environment files
+.env
+
+# Ignore OS/system files
+.DS_Store
+Thumbs.db
