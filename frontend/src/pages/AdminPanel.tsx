@@ -77,8 +77,8 @@ const AdminPanel: React.FC = () => {
         const token = localStorage.getItem('token');
         if (!token) return;
         const [ticketsRes, bookingsRes] = await Promise.all([
-          fetch('https://dubai-ticket-app-3.onrender.com/api/tickets'),
-          fetch('https://dubai-ticket-app-3.onrender.com/api/bookings/admin/all', {
+          fetch('https://dubai-ticket-app-1.onrender.com/api/tickets'),
+          fetch('https://dubai-ticket-app-1.onrender.com/api/bookings/admin/all', {
             headers: { 'Authorization': `Bearer ${token}` }
           })
         ]);
@@ -160,7 +160,7 @@ const AdminPanel: React.FC = () => {
           image: '',
           discount: data.discount || 0
         };
-        const resp = await fetch(`https://dubai-ticket-app-3.onrender.com/api/tickets${editingTicket ? '/' + editingTicket.id : ''}`, {
+        const resp = await fetch(`https://dubai-ticket-app-1.onrender.com/api/tickets${editingTicket ? '/' + editingTicket.id : ''}`, {
           method: editingTicket ? 'PUT' : 'POST',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -174,7 +174,7 @@ const AdminPanel: React.FC = () => {
         } else {
           toast.success(editingTicket ? 'Ticket updated successfully!' : 'Ticket created successfully!');
           // reload tickets
-          const tRes = await fetch('https://dubai-ticket-app-3.onrender.com/api/tickets');
+          const tRes = await fetch('https://dubai-ticket-app-1.onrender.com/api/tickets');
           const tJson = await tRes.json();
           if (tJson.success) {
             const tMapped: TicketType[] = tJson.data.map((t: any) => ({

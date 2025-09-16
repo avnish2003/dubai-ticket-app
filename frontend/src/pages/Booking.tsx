@@ -57,7 +57,7 @@ const Booking: React.FC = () => {
 
   const fetchTickets = async () => {
     try {
-      const response = await fetch('https://dubai-ticket-app-3.onrender.com/api/tickets');
+      const response = await fetch('https://dubai-ticket-app-1.onrender.com/api/tickets');
       const data = await response.json();
       
       if (data.success) {
@@ -148,7 +148,7 @@ const Booking: React.FC = () => {
     }
 
     try {
-      const response = await fetch('https://dubai-ticket-app-3.onrender.com/api/bookings', {
+      const response = await fetch('https://dubai-ticket-app-1.onrender.com/api/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
